@@ -4,8 +4,9 @@ import { useRef, useState } from 'react'
 let isLiked = false
 
 export default function LikeControl () {
+  const LIKES_COUNT = 99
   const imageRef = useRef<HTMLImageElement>(null)
-  const [likeCount, setLikeCount] = useState(99)
+  const [likeCount, setLikeCount] = useState(LIKES_COUNT)
 
   function onLikeVideo () {
     if (isLiked) {
