@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['p16-sign-va.tiktokcdn.com']
+    domains: ['p16-sign-va.tiktokcdn.com', 'picsum.photos']
   }
 }
 
