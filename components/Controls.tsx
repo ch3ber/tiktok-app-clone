@@ -1,6 +1,8 @@
+import BookMarkControl from './videoControls/BookMarkControl'
 import CommentsControl from './videoControls/CommentsControl'
 import LikeControl from './videoControls/LikeControl'
 import ProfileControl from './videoControls/ProfileControl'
+import ShareControl from './videoControls/ShareControl'
 
 export function Controls () {
   return (
@@ -8,8 +10,8 @@ export function Controls () {
       <li>{<ProfileControl profileUrl={'/'} />}</li>
       <li>{<LikeControl />}</li>
       <li>{<CommentsControl />}</li>
-      <li>{<ProfileControl profileUrl={'/'} />}</li>
-      <li>{<ProfileControl profileUrl={'/'} />}</li>
+      <li>{<BookMarkControl />}</li>
+      <li>{<ShareControl />}</li>
       <li>{<ProfileControl profileUrl={'/'} />}</li>
     </ul>
   )
