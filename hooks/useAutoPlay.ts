@@ -11,12 +11,13 @@ export const useAutoPlay = () => {
   const intersectionObserverCallback: IntersectionObserverCallback = (entries) => {
     const [entry] = entries
 
+    const videoElement = entry.target as HTMLVideoElement
     if (!entry.isIntersecting) {
-      entry.target.pause()
+      videoElement.pause()
     }
 
     if (entry.isIntersecting) {
-      entry.target.play()
+      videoElement.play()
     }
   }
 
