@@ -97,9 +97,9 @@ export default function CommentsControl () {
           <button onClick={() => setIsOpen(false)}><Image className='absolute right-5 top-0' src='/close-icon.svg' width={15} height={15} alt='Close icon button' /></button>
         </div>
         <section className='p-5 flex flex-col gap-4 overflow-scroll h-full'>
-          {COMMENS.map(comment => {
+          {COMMENS.map((comment, index) => {
             return (
-              <article className='flex justify-start items-start gap-1' key={comment.profile.name}>
+              <article className='flex justify-start items-start gap-1' key={index}>
                 <Image className='rounded-full' src={comment.profile.photo} width={30} height={30} alt="Profile picture" />
                 <div>
                   <h4 className='text-zinc-600 font-bold'>{comment.profile.name}</h4>
