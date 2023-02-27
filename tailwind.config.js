@@ -14,6 +14,9 @@ module.exports = {
       },
       animation: {
         likeVideo: 'likeVideo 300ms linear'
+      },
+      spacing: {
+        video: 'calc(100vh - 56px)' // 56px is the nav's heigth
       }
     }
   },
