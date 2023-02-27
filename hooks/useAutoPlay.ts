@@ -1,10 +1,12 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 export const useAutoPlay = () => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const options = {
-
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0
   }
 
   // eslint-disable-next-line no-undef
@@ -21,9 +23,10 @@ export const useAutoPlay = () => {
     }
   }
 
-  const observer = new IntersectionObserver(intersectionObserverCallback, options)
-
-  observer.observe(videoRef.current as HTMLVideoElement)
+  useEffect(() => {
+    const observer = new IntersectionObserver(intersectionObserverCallback, options)
+    observer.observe(videoRef.current as HTMLVideoElement)
+  }, [videoRef])
 
   return [videoRef]
 }
